@@ -1,9 +1,8 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 
-const url =
-  "https://static.openfoodfacts.org/data/openfoodfacts-products.jsonl.gz";
-// const url = "http://hn.algolia.com/api/v1/search?query=";
+//const url = "https://static.openfoodfacts.org/data/openfoodfacts-products.jsonl.gz";
+const url = "http://hn.algolia.com/api/v1/search?query=";
 
 const FetchData = () => {
   const fetchRequest = async () => {
