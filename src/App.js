@@ -1,12 +1,13 @@
 import "./index.css";
-import FetchData from "./pages/fetchData";
+//import FetchData from "./pages/fetchData";
 import Loading from "./components/loading";
+import Home from "./pages/home";
 
 function App() {
   return (
     <div>
-      <h2>get data</h2>
-      <Loading />
+      <h1>hello</h1>
+      <Home />
     </div>
   );
 }
