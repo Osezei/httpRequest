@@ -16,14 +16,17 @@ const AppProvider = ({ children }) => {
       const response = await axios(url);
       const data = response.data;
       console.log(data);
-      const { shots } = data;
+      const { drinks: shots } = data;
       if (shots) {
         const newshots = shots.map((item) => {
-          const { idDrink, strDrink, strDrinkThumb } = item;
+          const { idDrink, strDrink, strDrinkThumb, strGlass, strCategory } =
+            item;
           return {
             id: idDrink,
             name: strDrink,
             image: strDrinkThumb,
+            glass: strGlass,
+            category: strCategory,
           };
         });
         setDrinks(newshots);
@@ -39,7 +42,6 @@ const AppProvider = ({ children }) => {
   useEffect(() => {
     fetchRequest();
   }, []);
-
   return (
     <AppContext.Provider value={{ loading, drinks }}>
       {children}

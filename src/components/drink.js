@@ -1,12 +1,15 @@
 import React from "react";
-export default function Drink({ image, name }) {
+export default function Drink({ image, name, glass, category }) {
   return (
     <section>
-      <div className="box">
+      <div>
         <img src={image} alt={name} />
-        <h1>hello</h1>
       </div>
-      <h2>{name} </h2>
+      <div>
+        <h2>{name} </h2>
+        <h2>{glass}</h2>
+        <h2>{category}</h2>
+      </div>
     </section>
   );
 }
