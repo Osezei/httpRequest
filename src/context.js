@@ -15,7 +15,7 @@ const AppProvider = ({ children }) => {
     try {
       const response = await axios(url);
       const data = response.data;
-      console.log(data);
+      // console.log(data);
       const { drinks: shots } = data;
       if (shots) {
         const newshots = shots.map((item) => {
@@ -35,7 +35,7 @@ const AppProvider = ({ children }) => {
       }
       setLoading(false);
     } catch (error) {
-      console.log(error.response);
+      // console.log(error.response);
       setLoading(false);
     }
   };

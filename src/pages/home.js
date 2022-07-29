@@ -1,11 +1,17 @@
 import React from "react";
 import Drinks from "../components/drinksList";
+import Navbar from "../components/navbar";
+import SearchBar from "../components/searchBar";
+
+import "../index.css";
 
 function Home() {
   return (
-    <div>
+    <main>
+      <Navbar />
+      <SearchBar />
       <Drinks />
-    </div>
+    </main>
   );
 }
 
